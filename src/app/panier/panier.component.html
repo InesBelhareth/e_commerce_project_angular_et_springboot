@@ -1,0 +1,199 @@
+<!-- 
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-8">
+
+
+
+<div class="d-flex">
+    <div class="overflow-auto" style="height: 800px">
+      <div class="card m-12" style="max-width: 780px;" *ngFor="let produit of produitsPanier">
+          <div class="row g-0">
+              <div class="col-md-4">
+                  <img src="{{produit.img}} " class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-8">
+                  <div class="card-body">
+                      <h5 class="card-title">{{produit.nom}}</h5> 
+                      <i #icon class="fa fa-trash fa-2x"  aria-hidden="true"></i>
+
+                      <p class="card-text">
+                        {{produit.desc}}  
+                      </p>
+                      <p class="card-text">
+                          <small class="text-muted">Prix:{{produit.prix}} $</small>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+     
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+    <img #image src="assets/panier.gif" width="400px">
+
+    <button  routerLink="/login">
+    Commander    
+
+    <svg width="79" height="46" viewBox="0 0 79 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_618_1123)">
+      <path d="M42.9 2H76.5L34.5 44H2L42.9 2Z" fill="url(#paint0_linear_618_1123)"/>
+    </g>
+    <defs>
+      <filter id="filter0_f_618_1123" x="0" y="0" width="78.5" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_618_1123"/>
+      </filter>
+      <linearGradient id="paint0_linear_618_1123" x1="76.5" y1="2.00002" x2="34.5" y2="44" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.6"/>
+        <stop offset="1" stop-color="white" stop-opacity="0.05"/>
+      </linearGradient>
+    </defs>
+   </svg>
+   </button>
+   
+   
+</div>
+
+</div>
+</div> -->
+
+<section class="h-100 gradient-custom">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center my-4">
+        <div class="col-md-8">
+          <div class="card mb-4">
+            <div class="card-header py-3">
+              <h5 class="mb-0">VOS ARTICLES</h5>
+            </div>
+            <div class="card-body">
+              <!-- Single item -->
+              <div class="row" *ngFor="let produit of produitsPanier">
+                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0" >
+                  <!-- Image -->
+                  <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                    <img src="{{produit.img}}"
+                      class="w-100" alt="Blue Jeans Jacket" />
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                    </a>
+                  </div>
+                  <!-- Image -->
+                </div>
+  
+                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0" >
+                  <!-- Data -->
+                  <p><strong>{{produit.nom}}</strong></p>
+                  <p>{{produit.desc}}</p>
+                  <p>{{produit.rate}}</p>
+                  <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
+                    title="Remove item">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+                    title="Move to the wish list">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </button>
+                  <!-- Data -->
+                </div>
+  
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                  <!-- Quantity -->
+                  <!-- <div class="d-flex mb-4" style="max-width: 300px">
+                    <button 
+                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                      <i class="fa fa-minus-circle " style="color: black;" aria-hidden="true"></i>
+                    </button>
+  
+                    <div class="form-outline">
+                      <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
+                      <label class="form-label" for="form1">Quantity</label>
+                    </div>
+  
+                    <button 
+                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                      <i class="fa fa-plus-circle " style="color: black;" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  Quantity -->
+  
+                  <!-- Price -->
+                  <p class="text-start text-md-center">
+                    PRIX
+                    <strong>${{produit.prix}}</strong>
+                  </p>
+                  <!-- Price -->
+                </div>
+              </div>
+              <!-- Single item -->
+  
+              <hr class="my-4" />
+  
+              <!-- Single item -->
+            </div>
+          </div>
+          
+          <div class="card mb-4 mb-lg-0">
+            <div class="card-body">
+              <p><strong>ON ACCEPTE</strong></p>
+              <img class="me-2" width="45px"
+                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                alt="Visa" />
+              <img class="me-2" width="45px"
+                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                alt="American Express" />
+              <img class="me-2" width="45px"
+                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                alt="Mastercard" />
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header py-3">
+              <h5 class="mb-0">Summary</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  PRODUITS
+                  <span>${{montanttotale}}  <i class="fa fa-money" aria-hidden="true"></i></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                 CODE PROMO</li>
+                 <li>
+                
+                    <span class="input">
+                        <input type="text" placeholder="tapez votre code promo">
+                    </span>
+                
+            </li>
+                
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                  <div>
+                    <strong>TOTALE</strong>
+                   
+                  </div>
+                  <span><strong>{{montanttotale}}$</strong></span>
+                </li>
+              </ul>
+  
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-login [listproduitcommander]=" produitsPanier"></app-login>

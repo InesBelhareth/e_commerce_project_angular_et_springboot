@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    
+
+    <div class="col-md-6" >
+      <img  width="100%"   src="assets\img1.png" alt="">
+    </div>
+
+    
+    <div class="col-md-6">
+      <div class="containert">
+        <form #client="ngForm">
+
+      <div  >
+        <img class="brand-logo" src="assets\Tablet login.gif" alt=""> 
+
+      </div>
+      <div class="brand-title">Commander</div>
+      <div class="inputs">
+        <label>Nom et Prenom</label>
+        <input ngModel id="nom" name="nomprenom" type="text" placeholder="Votre nom et Prenom"  required>
+        <label>Adresse</label>
+
+        <input ngModel id="adr" name="adresse" type="text" placeholder="votre adresse"  required>
+        <label for="">Votre numero</label>
+        <input ngModel id="tel" name="tel" type="tel" placeholder="+(216)" required>
+
+        <button (click)="ajoutercommande1(client)"  type="submit">Commander</button>
+      
+      </div>
+    </form>
+
+    </div>
+  </div>
+    
+    
+   
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,15 @@
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.heart i {
+  font-size: 24px;
+  color: #000; /* Couleur de base du cœur */
+}
+
+.card .heart.active i {
+    color: red !important;
+  }

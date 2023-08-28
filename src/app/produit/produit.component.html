@@ -1,0 +1,31 @@
+<div class="card" data-animation="true">
+    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+      <a class="d-block blur-shadow-image">
+        
+        <img src={{produit.img}} alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+      </a>
+      <div class="colored-shadow" style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);"></div>
+    </div>
+    <div class="card-body text-center">
+      <div class="d-flex mt-n6 mx-auto">
+        
+        
+      </div>
+      <h5 class="font-weight-normal mt-3">
+        <a href="#">{{produit.nom}}</a>
+      </h5>
+      <p class="mb-0">{{produit.desc}}      </p>
+    </div>
+    <hr class="dark horizontal my-0">
+    <div class="card-footer d-flex">
+      <p class="font-weight-normal my-auto" >Prix:{{produit.prix}} $    
+      </p>
+      <i class="material-icons position-relative ms-auto text-lg me-1 my-auto"></i>
+      <div class="heart" (click)="toggleHeartColor()">
+        <i class="fa fa-heart"  [ngClass]="{'active': heartActive}" aria-hidden="true"></i>
+      </div>
+
+      <p class="text-sm my-auto" (click)="ajouterAuPanier(produit)" > <i style="cursor: pointer;" class="fa fa-cart-plus fa-2x " aria-hidden="true"  ></i>
+      </p>
+    </div>
+    </div>

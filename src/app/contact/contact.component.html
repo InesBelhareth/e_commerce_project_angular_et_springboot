@@ -1,0 +1,48 @@
+<div class="body">
+<div class="container d-flex justify-content-center align-items-center">
+<div class="col-md-6">
+
+
+
+	<img src="assets/contact.svg" alt="">
+</div>
+	
+	
+	<div class="md-col-6">
+
+	<!-- // FORM
+  -------------------------------------------------------------
+  ------------------------------------------------------------>
+	<form  #ajouterchat="ngForm">
+		<h1 class="title text-center mb-4">Contactez-nous</h1>
+
+			<!-- Name -->
+			<div class="form-group position-relative">
+				<label for="formName" class="d-block">
+					<i class="icon" data-feather="user"></i>
+				</label>
+				<input ngModel name="nom" type="text" id="formName" class="form-control form-control-lg thick" placeholder="Votre nom et prenom" required>
+			</div>
+
+			<!-- E-mail -->
+			<div class="form-group position-relative">
+				<label for="formEmail" class="d-block">
+					<i class="icon" data-feather="mail"></i>
+				</label>
+				<input ngModel name="email" type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="Votre E-mail" required>
+			</div>
+
+			<!-- Message -->
+			<div class="form-group message">
+				<textarea ngModel name="chat" id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Votre message" required></textarea>
+			</div>
+		
+			<!-- Submit btn -->
+			<div class="text-center">
+				<button (click)="ajouterchate(ajouterchat)" type="submit" class="btn btn-primary" tabIndex="-1">Envoyer le message</button>
+			</div>
+	</form>
+	
+</div>
+</div>
+</div>
